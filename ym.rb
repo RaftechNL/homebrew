@@ -5,20 +5,20 @@
 class Ym < Formula
   desc ""
   homepage "https://github.com/RaftechNL/ym"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/RaftechNL/ym/releases/download/v0.1.1/ym_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "624bef2fe75d3feec174935090652272d3e045dd81bcfe1ded07e1613676fc02"
+      url "https://github.com/RaftechNL/ym/releases/download/v0.2.0/ym_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "8b1950bfec4e241899a7440800f44f0fa25460385fd5f7d7eb56dbf09f54eb1f"
 
       def install
         bin.install "ym"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RaftechNL/ym/releases/download/v0.1.1/ym_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "21890cd3764522719553b65f75f48e086a27e00cd9a4ff040d753441ae63164a"
+      url "https://github.com/RaftechNL/ym/releases/download/v0.2.0/ym_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "a6c1b00b6d660c52ba9b8d410843a19076466003794a07737e1c6b835bdcdaa3"
 
       def install
         bin.install "ym"
@@ -28,24 +28,24 @@ class Ym < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/RaftechNL/ym/releases/download/v0.1.1/ym_0.1.1_Linux_armv6.tar.gz"
-      sha256 "b633419fea824f0fbe3fd8fc6daeb3fb79a0775026a9ef1d210476e018df70d7"
+      url "https://github.com/RaftechNL/ym/releases/download/v0.2.0/ym_0.2.0_Linux_armv6.tar.gz"
+      sha256 "545a90515cdcb1f4106c0ee410d7ef6fe8d209ba35403bcf1e47b588f8a65601"
 
       def install
         bin.install "ym"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RaftechNL/ym/releases/download/v0.1.1/ym_0.1.1_Linux_arm64.tar.gz"
-      sha256 "2d33dbed16f30de5c7b6ed443b472d83b7520e53cf5bb0d20c1f45033ddcd2a1"
+      url "https://github.com/RaftechNL/ym/releases/download/v0.2.0/ym_0.2.0_Linux_arm64.tar.gz"
+      sha256 "11a628ce22e471ee90af496f28c4f8f7c8a4db30584782a8cfc980fe6cebe99a"
 
       def install
         bin.install "ym"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RaftechNL/ym/releases/download/v0.1.1/ym_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "70dd0c1b9cddf0bac77085dffa852632f525e8ddcceaba54fd3efc088a18434f"
+      url "https://github.com/RaftechNL/ym/releases/download/v0.2.0/ym_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "578f1d86615e5e8dcd84db03003e260de7629cd4b0a365a2183079a78c6f8b03"
 
       def install
         bin.install "ym"
