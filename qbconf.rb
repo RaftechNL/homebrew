@@ -5,22 +5,24 @@
 class Qbconf < Formula
   desc ""
   homepage "https://github.com/RaftechNL/qbconf"
-  version "0.0.13"
+  version "0.0.14"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.13/qbconf_darwin_arm64.tar.gz"
-      sha256 "974b04d9fdc22408562b9b6a269095252a279d9f7864dac809121cf8b43fedce"
+      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.14/qbconf_darwin_arm64.tar.gz"
+      sha256 "8204c8c79194c823653033532feb640779b72c407f1855a07c572ff311ce19c9"
 
       def install
+        mv 'qbconf_darwin_arm64', 'qbconf'
         bin.install "qbconf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.13/qbconf_darwin_amd64.tar.gz"
-      sha256 "452c7ea4a1ab1b1837e95460a2a80517f620a704eea3afb59b5e5d565378d8ea"
+      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.14/qbconf_darwin_amd64.tar.gz"
+      sha256 "05f3c4eb6a3ce1f2f4b74c1fb86343ab2d8d912493962cdbc9037c36cbf6be51"
 
       def install
+        mv 'qbconf_darwin_amd64', 'qbconf'
         bin.install "qbconf"
       end
     end
@@ -28,18 +30,20 @@ class Qbconf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.13/qbconf_linux_arm64.tar.gz"
-      sha256 "58a15ffac25d87180e0783b3b64c8734943fbb6c81d1788f62d7b889fb0b5242"
+      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.14/qbconf_linux_arm64.tar.gz"
+      sha256 "70ab5da0ce9e149bce5192c1c5382871de2d20f0c568a06fedb6a189971672d7"
 
       def install
+        mv 'qbconf_linux_arm64', 'qbconf'
         bin.install "qbconf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.13/qbconf_linux_amd64.tar.gz"
-      sha256 "63898e20ce15ff81e32af2100430daa9c3b0a727ceed80acc5f92fa68821571e"
+      url "https://github.com/RaftechNL/qbconf/releases/download/0.0.14/qbconf_linux_amd64.tar.gz"
+      sha256 "c886f025334fd46e9a951579d99cd5d98d66a527a40c8497e2721419269a235b"
 
       def install
+        mv 'qbconf_linux_amd64', 'qbconf'
         bin.install "qbconf"
       end
     end
